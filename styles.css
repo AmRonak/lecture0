@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,900;1,700&family=Montserrat:wght@300;400;600;700;800;900&family=Raleway:ital,wght@0,400;0,800;0,900;1,700&display=swap');
+
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul, li{
+    list-style-type: none;
+}
+
+a{ text-decoration: none;}
+
+body
+{
+    font-size: 16px;
+}   
+
+:root
+{
+    /* font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Raleway', sans-serif; */
+    --golden: #ffba00;
+    --maincolor: #242424;
+    --lato: 'Lato', sans-serif;
+    --mont: 'Montserrat', sans-serif;
+    --rale: 'Raleway', sans-serif;
+}
+
+.container{ width: 100%; max-width: 1050px; padding: 0 15px; margin: 0 auto;}
+
+/* HEADER */
+header{ padding-top: 60px; background: url("/header\ pic.png") no-repeat; height: 960px; position: relative;}
+header .container .navbar .banner{ position: absolute; width: 351px; height: 78px; top: 30px; left: 0; background-color: var(--golden);}
+header .navbar { display: flex; justify-content: flex-end; align-items: center;}
+
+header .navbar .menubars { display: none;}
+
+header .navbar .banner .logo{ text-align: right; padding-top: 18px;padding-right: 36px; font-family: var(--mont); font-size: 2rem; font-weight: 800; letter-spacing: 2px; color: white; z-index: 9;}
+header .navbar ul{ display: flex; justify-content: center; align-items: center; width: 41rem; height: 2rem;}
+header .navbar .menulist .listitem{ font-family: var(--lato); font-size: 2rem; font-weight: 400; color: white; margin-right: 4rem; cursor: pointer;}
+header .navbar .menulist .listitem:hover { color: var(--golden);}
+
+header .mainbanner{position: absolute; top: 403px; width: 100%; height: 12.375rem; background-color: var(--golden); z-index: 2;}
+
+/* MAIN SECTION */
+header .section {display: flex; justify-content: space-between; column-gap: 20px; margin-top: 22.5rem; }
+
+header .container .section h1 {width: 562px; height: 196px; text-transform: uppercase; color: white; font-family: var(--mont); font-size: 6.5rem; line-height: 74px; letter-spacing: 2px; font-weight: normal; z-index: 3; letter-spacing: .62rem;}
+
+header .container .section h1 span {display: block; width: 100%; font-size: 125px; font-weight: 900; line-height: 90px; padding-bottom: 30px; letter-spacing: 0;}
+
+header .container .section .btn {margin-top: 116px; margin-left: 76px;width: 341px; height: 86px; background-color: var(--golden); border: solid 4px white ; z-index: 3; position: relative; cursor: pointer;}
+
+header .container .section .btn { position: absolute; top: 425px; right: 108px; font-size: 2rem; font-family: var(--mont); font-weight: 600;  text-transform: uppercase; padding-top: 32px; padding-left: 76px; line-height: 28px; color: white; }
+
+header .container .section .btn:hover
+{
+    color: var(--golden);
+    background-color: white;
+}
+
+/* MIDDLE SECTION */
+section { min-height: 607px; position: relative; background-color: var(--maincolor);}
+section .bar {position: absolute; top: 34.7%; bottom: 34.7%; left: 9.1%; width: 841px; height: 192px; background-color: var(--golden);}
+section .container { }
+section .container .part1 {display: flex; padding-top: 140px; }
+section .container .part1 .rotated{writing-mode: vertical-lr; transform: rotate(-180deg); align-self: center; font-family: var(--mont); font-weight: 300; letter-spacing: 4px; font-size: 3rem;  color: white;}
+section .container .part1 .what-section { z-index: 1; padding-left: 76px; max-width: 603px; font-family: var(--lato); color: white;}
+section .container .part1 .what-section h1 {font-size: 2.625rem; letter-spacing: .5rem; font-weight: 900;}
+section .container .part1 .what-section ._1{font-size: 2rem; font-weight: 400; letter-spacing: 0;}
+section .container .part1 .what-section ._11 { padding-top: 40px;}
+section .container .part1 .what-section ._12 { padding-top: 40px;}
+section .container .part1 .what-section ._13 { padding-top: 40px;}
+section .container .part3 {position: absolute; top: 80px; bottom: 80px; right: 0%; width: 621px; }
+section .container .part3 img{ width: 100%; }
+
+/* MIDDLE SECTION */
+
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1080px)
+{
+    header .navbar .menulist .listitem{ display: none;}   
+    header .navbar .menubars { display: inline-block;position: absolute; top: 45px; right: 45px; background-color: white; border: solid 4px white; cursor: pointer;}
+    header .navbar .menubars .bar1 {background-color: var(--golden); width: 35px; height: 5px; margin-top: 2.5px;}
+    header .navbar .menubars .bar2 { background-color: var(--golden); width: 35px; height: 5px; margin-top: 2.5px;}
+    header .navbar .menubars .bar3 { background-color: var(--golden); width: 35px; height: 5px; margin-top: 2.5px;}
+    
+    /* header .container .section{ justify-content: space-evenly; flex-wrap: wrap; } */
+    header .container .section h1 { margin: 0 auto; width: 396px; height: 165px; font-size: 5rem; line-height: 50px; letter-spacing: .10rem;}
+    header .container .section h1 span{font-size: 5rem; line-height: 70px; }
+
+    header .container .section .btn{ top: 553px; right: 25%;  }
+        
+    header .mainbanner{position: absolute; top: 403px; width: 100%; height: 10.375rem; background-color: var(--golden); z-index: 2;}
+}
+
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 840px)
+{
+    
+}
+
+@media screen and (max-width: 574px)
+{
+    header .container .navbar .banner{ position: absolute; width: 200px; height: 50px; top: 30px; left: 0; background-color: var(--golden);}
+    
+    header .navbar .banner .logo{ text-align: right; padding-top: 5px;padding-right: 12px; font-family: var(--mont); font-size: 1.8rem; font-weight: 800; }
+
+
+    header .container .section h1 {margin-left: 1rem; width: 232px; height: 120px; font-size: 3.2rem;  letter-spacing: .05rem;}
+
+    header .container .section h1 span{font-size: 3.5rem; padding-bottom: 0px; letter-spacing: .1rem;}
+    
+    header .container .section .btn{ top: 553px; right: 30%; width: 300px; height: 75px; font-size: 1.8rem; padding-top: 15px; padding-left: 58px;}
+
+    header .mainbanner{position: absolute; top: 403px; width: 100%; height: 7.375rem; background-color: var(--golden); z-index: 2;}
+}
